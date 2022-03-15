@@ -9,6 +9,7 @@ import com.dreamtrip.destinos.usecases.ExcluirDestino;
 import com.dreamtrip.destinos.usecases.ListarDestinos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class DestinoController {
     private final ExcluirDestino excluirDestino;
     private final ListarDestinos listarDestinos;
 
-    @PostMapping()
+    @PostMapping(consumes = MediaType.TEXT_HTML_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public DestinoResponse criarDestino(@RequestBody DestinoRequest destinoRequest) {
         Destino destino = destinoRequest.converteParaDomain();
