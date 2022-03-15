@@ -26,7 +26,7 @@ public class DestinoController {
     private final ExcluirDestino excluirDestino;
     private final ListarDestinos listarDestinos;
 
-    @PostMapping(consumes = MediaType.TEXT_HTML_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public DestinoResponse criarDestino(@RequestBody DestinoRequest destinoRequest) {
         Destino destino = destinoRequest.converteParaDomain();
