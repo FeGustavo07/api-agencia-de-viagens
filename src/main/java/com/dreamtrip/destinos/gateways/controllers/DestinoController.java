@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/destinos/gerenciar")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
 public class DestinoController {
 
