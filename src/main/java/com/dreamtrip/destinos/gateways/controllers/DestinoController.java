@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/destinos")
-@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class DestinoController {
 
